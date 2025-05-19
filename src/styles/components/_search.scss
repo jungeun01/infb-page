@@ -1,0 +1,51 @@
+@import "../variables";
+
+.search {
+  display: flex;
+  justify-content: end;
+  // gap: 10px;
+  margin-bottom: 20px;
+  input {
+    padding: 12px 6px;
+    border: none;
+    border-bottom: 1px solid #b8b3b3;
+    outline: none;
+    font-size: $font-size-base;
+  }
+  input::placeholder {
+    color: #b8b3b3;
+    font-size: $font-size-base;
+  }
+  button {
+    margin-top: 8px;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: $font-size-large;
+    // justify-content: center;
+    align-items: center;
+  }
+  button:hover {
+    color: blue;
+  }
+
+  &__highlight {
+    color: $primary-color;
+    font-weight: bold;
+  }
+  @include mobile {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    input {
+      padding: 0px 6px;
+      width: 150px;
+    }
+    input::placeholder {
+      font-size: 14px;
+    }
+    button {
+      margin-top: 2px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import "../../../variables";
+
+.certification-form {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .form-group {
+    margin-bottom: 2rem;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+
+      label {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .add-button {
+        padding: 0.5rem 1rem;
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+
+        &:hover {
+          background-color: #138496;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: white;
+
+      &:focus {
+        outline: none;
+        border-color: #17a2b8;
+        box-shadow: 0 0 0 2px rgba(23, 162, 184, 0.1);
+      }
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.7rem center;
+      background-size: 1em;
+      padding-right: 2.5rem;
+      cursor: pointer;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    .certification-item {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      .cert-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .input-row {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+
+          select,
+          input {
+            flex: 1;
+          }
+        }
+      }
+
+      .description-list {
+        .description-item {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 0.5rem;
+
+          input {
+            flex: 1;
+          }
+
+          .delete-button {
+            padding: 0.3rem 0.5rem;
+            background: none;
+            color: #ff0000;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .btnBox {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+
+          button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            flex: 1;
+
+            &.add-button {
+              background-color: #28a745;
+              color: white;
+              margin: 0;
+
+              &:hover {
+                background-color: #218838;
+              }
+            }
+
+            &.delete-all-button {
+              background-color: white;
+              border: 1px solid #ddd;
+              color: #ff0000;
+
+              &:hover {
+                background-color: #f8f9fa;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .image-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    input[type="file"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fff;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .delete-button {
+      padding: 8px 12px;
+      background-color: #ff4444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #cc0000;
+      }
+    }
+  }
+
+  .image-preview {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+
+    .preview-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+
+      img {
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: contain;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background-color: white;
+      }
+
+      span {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .certification-form {
+    padding: 1rem;
+
+    .form-group {
+      .certification-item {
+        padding: 1rem;
+      }
+    }
+  }
+}

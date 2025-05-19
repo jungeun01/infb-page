@@ -1,0 +1,78 @@
+@import "../variables";
+
+.recruitment-benefits {
+  padding: $spacing-xl 0;
+
+  .benefits-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      font-size: $font-size-h1;
+      color: $primary-color;
+      margin-bottom: $spacing-base;
+    }
+
+    p {
+      font-size: $font-size-large;
+      color: $text-light;
+    }
+  }
+
+  .benefits-content {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    padding: 0 $spacing-base;
+  }
+
+  .benefits-item {
+    background: $white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefits-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .benefits-text {
+      padding: $spacing-base;
+
+      h2 {
+        font-size: $font-size-h3;
+        color: $primary-color;
+        margin-bottom: $spacing-small;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: $text-color;
+        line-height: 1.6;
+        margin-bottom: $spacing-small;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .recruitment-benefits {
+    .benefits-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

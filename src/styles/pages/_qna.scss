@@ -1,0 +1,58 @@
+@import "../variables";
+.recruitment-qna {
+  padding: $spacing-xl 0;
+  @include container;
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: $font-size-h2;
+
+    @include mobile {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .post-search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    input {
+      padding: 12px 6px;
+      border: none;
+      border-bottom: 1px solid #b8b3b3;
+      outline: none;
+      font-size: $font-size-base;
+
+      @include mobile {
+        padding: 8px 6px;
+        font-size: 0.9rem;
+      }
+    }
+
+    button {
+      margin-top: 8px;
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: $font-size-large;
+      align-items: center;
+
+      @include mobile {
+        margin-top: 4px;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}

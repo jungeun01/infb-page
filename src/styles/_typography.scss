@@ -1,0 +1,157 @@
+@import "variables";
+// Common Typography Styles
+.page-title {
+  font-family: $font-family-heading;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $primary-navy;
+  margin-bottom: $spacing-lg;
+}
+
+.section-title {
+  font-family: $font-family-heading;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $text-dark;
+  margin-bottom: $spacing-md;
+}
+
+.sub-title {
+  font-family: $font-family-heading;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+  color: $text-dark;
+  margin-bottom: $spacing-sm;
+}
+
+.content-text {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-dark;
+}
+
+.highlight-text {
+  font-family: $font-family-accent;
+  font-weight: $font-weight-medium;
+  color: $primary-teal;
+}
+
+.description-text {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  line-height: $line-height-base;
+}
+
+.button-text {
+  font-family: $font-family-accent;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+}
+
+.nav-text {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+}
+
+.card-title {
+  font-family: $font-family-heading;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $text-dark;
+}
+
+.card-content {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-dark;
+}
+
+.meta-text {
+  font-family: $font-family-base;
+  font-size: $font-size-xs;
+  color: $text-secondary;
+}
+
+// Form styles
+.form-label {
+  font-family: $font-family-heading;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-dark;
+  margin-bottom: $spacing-xs;
+}
+
+.form-input {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-dark;
+}
+
+.form-helper {
+  font-family: $font-family-base;
+  font-size: $font-size-xs;
+  color: $text-secondary;
+  margin-top: $spacing-xs;
+}
+
+// Table styles
+.table-header {
+  font-family: $font-family-heading;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $text-dark;
+}
+
+.table-cell {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $text-dark;
+}
+
+// List styles
+.list-title {
+  font-family: $font-family-heading;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $text-dark;
+  margin-bottom: $spacing-xs;
+}
+
+.list-item {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-dark;
+  line-height: $line-height-base;
+}
+
+// Alert and notification styles
+.alert-title {
+  font-family: $font-family-accent;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.alert-message {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+// Timeline styles
+.timeline-year {
+  font-family: $font-family-heading;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $primary-teal;
+}
+
+.timeline-content {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-dark;
+  line-height: $line-height-base;
+}

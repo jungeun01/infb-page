@@ -1,0 +1,68 @@
+{
+  "company": {
+    "business": {
+      "si": {
+        "areas": [
+          {
+            "title": "SI Consulting",
+            "items": [
+              "정보화 전략",
+              "솔루션 기반 컨설팅",
+              "사용자 요구사항 분석 및 최적안 제시"
+            ]
+          },
+          {
+            "title": "SW/HW 판매 관리",
+            "items": [
+              "하드웨어 발주",
+              "최적의 하드웨어 선정",
+              "고객의 환경에 적합한 시스템 설계"
+            ]
+          },
+          {
+            "title": "System 구축",
+            "items": [
+              "고객 맞춤형 시스템 구축",
+              "각 분야별 업무전산화 구축",
+              "통합 솔루션 제공"
+            ]
+          },
+          {
+            "title": "기술 지원",
+            "items": [
+              "각 영역별 전문 담당자에 의한 상담",
+              "정확한 장애진단 및 문제해결"
+            ]
+          }
+        ]
+      },
+      "consulting": {
+        "areas": [
+          {
+            "title": "Solution Consulting",
+            "items": [
+              "고객사 시스템 구성 고려하여 ERP, EP, ISP 공공, 제조 서비스 산업 군별로 최적의 솔루션 제안"
+            ]
+          },
+          {
+            "title": "Specialization Consulting",
+            "items": [
+              "통합 보안 서비스종합환경 서비스",
+              "종합 자원 전사적 자원관리 시스템 서비스",
+              "EnterPrise Portal 솔루션 구축 서비스"
+            ]
+          },
+          {
+            "title": "Business Consulting",
+            "items": [
+              "비즈니스 컨설팅 서비스",
+              "e-Biz 서비스경영 정보 관리 시스템 구축 서비스",
+              "제품 수명 주기 관리",
+              "B2B, B2C, B2G"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

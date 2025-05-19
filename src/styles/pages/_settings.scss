@@ -1,0 +1,95 @@
+@import "../variables";
+
+.settings {
+  h2 {
+    margin-bottom: 2rem;
+    color: $primary-navy;
+  }
+
+  .settings-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+
+    h3 {
+      color: $primary-navy;
+      margin-bottom: 1.5rem;
+      font-size: $font-size-h4;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $primary-dark;
+        font-weight: 500;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid rgba($primary-navy, 0.2);
+        border-radius: 4px;
+        font-size: $font-size-base;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-navy;
+        }
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      &.checkbox {
+        display: flex;
+        align-items: center;
+
+        label {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0;
+          cursor: pointer;
+
+          input[type="checkbox"] {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    margin-top: 2rem;
+    text-align: right;
+
+    .save-button {
+      padding: 0.75rem 2rem;
+      background: $primary-navy;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: $font-size-base;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: darken($primary-navy, 10%);
+      }
+    }
+  }
+}

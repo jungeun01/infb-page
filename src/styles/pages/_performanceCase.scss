@@ -1,0 +1,500 @@
+@import "../variables";
+
+.performance-case {
+  padding: $spacing-xl $spacing-lg;
+  max-width: $desktop;
+  margin: 0 auto;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-xl * 2;
+
+    h2 {
+      font-size: calc(2.5rem * var(--font-size-multiplier));
+      color: $primary-dark;
+      font-weight: 600;
+      margin-bottom: $spacing-md;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -$spacing-sm;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(45deg, $primary-navy, $primary-gold);
+      }
+    }
+
+    p {
+      font-size: calc(1.1rem * var(--font-size-multiplier));
+      color: $primary-dark;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  &__years {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid $border-light;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__year-btn {
+    padding: 1rem 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: $text-gray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+
+    &:hover {
+      color: $primary-navy;
+    }
+
+    &::after {
+      content: "년";
+      font-size: 0.9rem;
+      margin-left: 2px;
+    }
+
+    &.active {
+      color: $primary-navy;
+      font-weight: 600;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $primary-navy;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 0.8rem 0.5rem;
+      font-size: 1rem;
+
+      &::after {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: $spacing-lg;
+    padding: $spacing-md;
+  }
+
+  &__item {
+    background: white;
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+    border: 2px solid rgba($primary-dark, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-size: 80% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: $primary-purple;
+      opacity: 0;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-lg;
+      background-color: rgba(255, 255, 255, 0.85);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .performance-case__category {
+        background: $primary-coral;
+      }
+    }
+
+    &[data-category="국세청"] {
+      background-image: url("/resources/images/clients/국세청.png");
+      &::before {
+        background: $org-nts;
+      }
+      border-color: $org-nts;
+      .performance-case__category {
+        background: $org-nts;
+      }
+    }
+
+    &[data-category="조달청"] {
+      background-image: url("/resources/images/clients/조달청.png");
+      &::before {
+        background: $org-pps;
+      }
+      border-color: $org-pps;
+      .performance-case__category {
+        background: $org-pps;
+      }
+    }
+
+    &[data-category="관세청"] {
+      background-image: url("/resources/images/clients/관세청.png");
+      &::before {
+        background: $org-customs;
+      }
+      border-color: $org-customs;
+      .performance-case__category {
+        background: $org-customs;
+      }
+    }
+
+    &[data-category="포스코"] {
+      background-image: url("/resources/images/clients/포스코.png");
+      &::before {
+        background: $org-posco;
+      }
+      border-color: $org-posco;
+      .performance-case__category {
+        background: $org-posco;
+      }
+    }
+
+    &[data-category="KISTI"] {
+      background-image: url("/resources/images/clients/KISTI.png");
+      &::before {
+        background: $org-kisti;
+      }
+      border-color: $org-kisti;
+      .performance-case__category {
+        background: $org-kisti;
+      }
+    }
+
+    &[data-category="소방청"] {
+      background-image: url("/resources/images/clients/소방청.png");
+      &::before {
+        background: $org-fire;
+      }
+      border-color: $org-fire;
+      .performance-case__category {
+        background: $org-fire;
+      }
+    }
+    &[data-category="소방청/국가정보자원관리원"] {
+      background-image: url("/resources/images/clients/소방청.png");
+      &::before {
+        background: $org-fire;
+      }
+      border-color: $org-fire;
+      .performance-case__category {
+        background: $org-fire;
+      }
+    }
+
+    &[data-category*="국가철도공단"] {
+      background-image: url("/resources/images/clients/국가철도공단.png");
+      &::before {
+        background: $org-railway;
+      }
+      border-color: $org-railway;
+      .performance-case__category {
+        background: $org-railway;
+      }
+    }
+
+    &[data-category="한국산업기술평가관리원"] {
+      background-image: url("/resources/images/clients/한국산업기술기획평가원.png");
+      &::before {
+        background: $org-keit;
+      }
+      border-color: $org-keit;
+      .performance-case__category {
+        background: $org-keit;
+      }
+    }
+
+    &[data-category="한국전자통신연구원"] {
+      background-image: url("/resources/images/clients/한국전자통신연구원.png");
+      &::before {
+        background: $org-etri;
+      }
+      border-color: $org-etri;
+      .performance-case__category {
+        background: $org-etri;
+      }
+    }
+
+    &[data-category="국민권익위원회"] {
+      background-image: url("/resources/images/clients/국민권익위원회.png");
+      &::before {
+        background: $org-acrc;
+      }
+      border-color: $org-acrc;
+      .performance-case__category {
+        background: $org-acrc;
+      }
+    }
+
+    &[data-category="화인시스템"] {
+      background-image: url("/resources/images/clients/화인시스템.png");
+      &::before {
+        background: $org-fine;
+      }
+      border-color: $org-fine;
+      .performance-case__category {
+        background: $org-fine;
+      }
+    }
+
+    &[data-category="국토부"] {
+      background-image: url("/resources/images/clients/국토교통부.png");
+      &::before {
+        background: $org-molit;
+      }
+      border-color: $org-molit;
+      .performance-case__category {
+        background: $org-molit;
+      }
+    }
+
+    &[data-category="정부통합전산센터"] {
+      background-image: url("/resources/images/clients/정부통합전산센터.png");
+      &::before {
+        background: $org-nca;
+      }
+      border-color: $org-nca;
+      .performance-case__category {
+        background: $org-nca;
+      }
+    }
+
+    &[data-category="한국우편사업진흥원"] {
+      background-image: url("/resources/images/clients/한국우편사업진흥원.png");
+      &::before {
+        background: $org-posta;
+      }
+      border-color: $org-posta;
+      .performance-case__category {
+        background: $org-posta;
+      }
+    }
+
+    &[data-category="인사혁신처"] {
+      background-image: url("/resources/images/clients/인사혁신처.png");
+      &::before {
+        background: $org-mpm;
+      }
+      border-color: $org-mpm;
+      .performance-case__category {
+        background: $org-mpm;
+      }
+    }
+
+    &[data-category="엔텔스"] {
+      background-image: url("/resources/images/clients/엔텔스.png");
+      &::before {
+        background: $org-entels;
+      }
+      border-color: $org-entels;
+      .performance-case__category {
+        background: $org-entels;
+      }
+    }
+
+    &[data-category="특허청"] {
+      background-image: url("/resources/images/clients/특허청.png");
+      &::before {
+        background: $org-kipo;
+      }
+      border-color: $org-kipo;
+      .performance-case__category {
+        background: $org-kipo;
+      }
+    }
+
+    &[data-category="울트라엔지니어링"] {
+      &::before {
+        background: $org-ultra;
+      }
+      border-color: $org-ultra;
+      .performance-case__category {
+        background: $org-ultra;
+      }
+    }
+
+    &[data-category="보건복지부"] {
+      &::before {
+        background: $org-mohw;
+      }
+      border-color: $org-mohw;
+      .performance-case__category {
+        background: $org-mohw;
+      }
+    }
+
+    &[data-category="Joy 디자인"] {
+      background-image: url("/resources/images/clients/조이디자인.png");
+      &::before {
+        background: $org-joy;
+      }
+      border-color: $org-joy;
+      .performance-case__category {
+        background: $org-joy;
+      }
+    }
+
+    .logo {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &[data-category="국세청"],
+    &[data-category="조달청"],
+    &[data-category="관세청"] {
+      .logo img {
+        max-width: 60%;
+        max-height: 60%;
+      }
+    }
+
+    .performance-case__item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1 1 auto;
+      justify-content: space-between;
+      min-height: 0;
+      align-items: center;
+    }
+
+    .organization {
+      font-size: $font-size-h5;
+      font-weight: 600;
+      color: $primary-dark;
+      margin-bottom: 1rem;
+    }
+    .details {
+      width: 50%;
+      color: $primary-dark;
+      font-weight: 600;
+      border: 1px solid $primary-dark;
+      padding: 0.5rem 1rem;
+      border-radius: $border-radius-full;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    padding: $spacing-xs $spacing-md;
+    background: $org-default;
+    color: white;
+    border-radius: $border-radius-full;
+    font-size: calc(0.9rem * var(--font-size-multiplier));
+    margin-bottom: $spacing-sm;
+    transition: $transition-base;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: calc(1.1rem * var(--font-size-multiplier));
+    color: $primary-dark;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  @media (max-width: $mobile) {
+    padding: $spacing-lg $spacing-md;
+
+    &__header {
+      margin-bottom: $spacing-xl;
+
+      h2 {
+        font-size: calc(2rem * var(--font-size-multiplier));
+      }
+
+      p {
+        font-size: calc(1rem * var(--font-size-multiplier));
+        padding: 0 $spacing-md;
+      }
+    }
+
+    &__years {
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-xl;
+    }
+
+    &__year-btn {
+      padding: $spacing-sm $spacing-md;
+      font-size: calc(1rem * var(--font-size-multiplier));
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+
+    &__item {
+      padding: $spacing-md;
+    }
+  }
+}

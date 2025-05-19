@@ -1,0 +1,53 @@
+{
+  "company": {
+    "about": {
+      "slides": [
+        {
+          "title": "SI & 컨설팅 서비스",
+          "description": "정보화 전략 수립부터 시스템 구축까지 고객 맞춤형 통합 솔루션 제공",
+          "imageClass": "slide1"
+        },
+        {
+          "title": "IoT 시스템 구축",
+          "description": "하드웨어 개발 및 맞춤형 IoT 솔루션으로 스마트한 디지털 혁신 구현",
+          "imageClass": "slide2"
+        },
+        {
+          "title": "클라우드 인프라 서비스",
+          "description": "클라우드 구축, 백업, 재해복구 등 안정적인 IT 인프라 환경 구축",
+          "imageClass": "slide3"
+        }
+      ],
+      "description": "IT 분야에서 기업 고객의 효율적인 IT 환경 구축을 위해 SI, e-Service, IT Outsourcing, 기술 지원 서비스를 제공하며 안정적인 성장을 이루어 왔습니다. 아울러 loT Platform 연구를 통해 지능적인 미래 사회에 도래할 4차 산업혁명을 대비한 플랫폼의 개발 및 상품화를 통해 Global Market의 진출 및 신 사업 발굴 등 미래 시장 경쟁에 앞서고자 끊임 없는 노력과 도전을 하고 있습니다.",
+      "services": [
+        {
+          "title": "IT Service",
+          "description": "SI/SM 구축 및 운영, 시스템 통합 유지보수를 통해 공공 및 민간 분야의 IT 시스템 구축부터 운영까지, 전문적인 기술력으로 고객 맞춤형 서비스를 제공합니다.",
+          "imageClass": "box1"
+        },
+        {
+          "title": "IoT 시스템구축 및 솔루션",
+          "description": "하드웨어 개발 및 맞춤형 IoT 솔루션 제공을 통해 IoT 기기 개발부터 시스템 구축까지, 고객의 환경에 맞는 다양한 IoT 솔루션을 제공합니다.",
+          "imageClass": "box2"
+        }
+      ],
+      "products": [
+        {
+          "title": "시스템 통합 구축",
+          "description": "공공/민간 분야 SI 구축 및 컨설팅",
+          "imageClass": "pro_box1"
+        },
+        {
+          "title": "IoT 솔루션",
+          "description": "IoT 하드웨어 개발 및 시스템 구축",
+          "imageClass": "pro_box2"
+        },
+        {
+          "title": "유지보수 서비스",
+          "description": "IT 시스템 통합 유지보수 및 운영",
+          "imageClass": "pro_box3"
+        }
+      ]
+    }
+  }
+}

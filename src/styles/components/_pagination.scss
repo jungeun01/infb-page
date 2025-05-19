@@ -1,0 +1,33 @@
+@import "../variables";
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    &--active {
+      background-color: $primary-color;
+      color: $text-light;
+    }
+  }
+}
+
+.pagination li {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination li:hover {
+  background-color: #f1f1f1;
+}

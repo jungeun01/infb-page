@@ -1,0 +1,210 @@
+@import "../variables";
+
+.recruitment-talent {
+  padding: $spacing-xl 0;
+  .talent-header {
+    font-size: calc(2.5rem * var(--font-size-multiplier));
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      font-size: $font-size-h1;
+      margin-bottom: $spacing-base;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+    margin: 0;
+    p {
+      font-size: $font-size-large;
+      color: $text-light;
+      margin-bottom: 100px;
+
+      @include mobile {
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .talent-content {
+    @include container;
+    display: flex;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    // padding: 0 $spacing-base;
+
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-base;
+    }
+
+    .talent-title {
+      p {
+        font-size: $font-size-large;
+        color: $gray;
+        margin: 0;
+        padding: 5px 0;
+        text-align: start;
+
+        @include mobile {
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+    .talent-button {
+      display: flex;
+      justify-content: start;
+      margin-top: 0.75rem;
+
+      @include mobile {
+        justify-content: center;
+      }
+
+      button {
+        padding: 8px 24px;
+        border-radius: 12px;
+        border: 1px solid black;
+        background-color: $background-color;
+        font-size: $font-size-base;
+
+        @include mobile {
+          font-size: 0.9rem;
+          padding: 6px 18px;
+        }
+      }
+      button:hover {
+        background-color: $primary-navy;
+        color: $white;
+        transition: 0.1s;
+      }
+    }
+    .talent-img {
+      img {
+        width: 500px;
+
+        @include mobile {
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // 복리후생 부분
+  .recruitment-benefits {
+    margin-top: 100px;
+    height: auto;
+    min-height: 650px;
+    // background: linear-gradient(
+    //   135deg,
+    //   #fd7c02bd 10%,
+    //   rgb(236, 206, 68) 60%,
+    //   // #1a3c7c 30%
+    // );
+    background-image: url("../../resources/images/main/sub_bg.png");
+    padding: $spacing-xl 0;
+    color: $white;
+
+    @include mobile {
+      margin-top: 50px;
+      padding: $spacing-base 0;
+    }
+
+    .benefits-header {
+      text-align: center;
+      margin-bottom: $spacing-xl;
+
+      h1 {
+        font-size: $font-size-h1;
+        color: $white;
+        margin-bottom: $spacing-base;
+
+        @include mobile {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: $font-size-large;
+        color: $text-light;
+
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+    }
+    .benefits-icon {
+      text-align: start;
+      // display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      // column-gap: 180px;
+      align-items: center;
+      // grid-template-columns: repeat(3, 1fr);
+
+      @include mobile {
+        flex-direction: column;
+        gap: $spacing-base;
+      }
+
+      img {
+        filter: brightness(0) invert(1);
+        margin-right: 30px;
+
+        @include mobile {
+          margin-right: 15px;
+          width: 40px;
+        }
+      }
+      ul > li {
+        list-style-type: disc;
+
+        @include mobile {
+          font-size: 0.9rem;
+        }
+      }
+      .icon-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 30px 0;
+
+        @include mobile {
+          margin: 15px 0;
+        }
+
+        h2 {
+          margin: 0;
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          @include mobile {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .recruitment-talent {
+    .talent-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

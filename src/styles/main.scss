@@ -1,0 +1,110 @@
+@import "variables";
+@import "components/kakaoMap";
+
+// Global styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  color: $text-color;
+  background-color: $background-color;
+  word-break: keep-all;
+}
+* {
+  box-sizing: border-box;
+}
+// Import component styles
+@import "components/navbar";
+@import "components/footer";
+@import "components/layout";
+@import "components/noticeList";
+@import "components/noticeDetail";
+
+// Import page styles
+@import "pages/company";
+@import "pages/certification";
+@import "pages/history";
+@import "pages/admin/collectionEditor";
+@import "pages/contentManagement";
+@import "pages/adminDashboard";
+@import "pages/announcement";
+
+// Import admin forms
+
+// Font Face Declarations
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  src: url("../resources/fonts/NotoSansCJKkr-Regular.woff2") format("woff2"),
+    url("../resources/fonts/NotoSansCJKkr-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans CJK KR";
+  src: url("../resources/fonts/NotoSansCJKkr-Bold.woff2") format("woff2"),
+    url("../resources/fonts/NotoSansCJKkr-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../resources/fonts/NanumSquareR.woff2") format("woff2"),
+    url("../resources/fonts/NanumSquareR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../resources/fonts/NanumSquareB.woff2") format("woff2"),
+    url("../resources/fonts/NanumSquareB.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "paybooc Medium";
+  src: url("../resources/fonts/paybooc Medium.ttf") format("truetype"),
+    url("../resources/fonts/paybooc Medium.woff2") format("woff2"),
+    url("../resources/fonts/paybooc-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Utility Classes
+.container {
+  @include container;
+}
+
+// Animation Classes
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}

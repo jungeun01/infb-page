@@ -1,0 +1,669 @@
+@import "../variables";
+.business-info {
+  &__intro {
+    position: relative;
+    height: 25vh;
+    background: linear-gradient(
+      135deg,
+      $primary-navy 0%,
+      darken($primary-navy, 10%) 100%
+    );
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        rgba($primary-gold, 0.1) 0%,
+        rgba($primary-navy, 0.1) 100%
+      );
+      transform: skewY(-6deg);
+      transform-origin: top left;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        -45deg,
+        rgba($primary-gold, 0.1) 0%,
+        rgba($primary-navy, 0.1) 100%
+      );
+      transform: skewY(6deg);
+      transform-origin: top right;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    &-title {
+      h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .highlight-text {
+          font-size: $font-size-h3;
+          color: $primary-gold;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+        }
+
+        .main-text {
+          font-size: $font-size-h1;
+          color: white;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(
+              to right,
+              $primary-gold,
+              lighten($primary-gold, 20%)
+            );
+          }
+        }
+      }
+    }
+  }
+
+  &__tabs {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .tab-button {
+      font-size: $font-size-large;
+      padding: 1rem 3rem;
+      border: none;
+      background: transparent;
+      color: $primary-dark;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: transparent;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        color: $primary-navy;
+      }
+
+      &.active {
+        color: $primary-navy;
+        font-weight: 600;
+
+        &::after {
+          background: $primary-navy;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  &__card-grid {
+    display: grid;
+    gap: 2rem;
+
+    &.si-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.consulting-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba($primary-navy, 0.1);
+
+    // hover 애니메이션 임시 비활성화
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba($primary-navy, 0.1);
+      border-color: $primary-navy;
+
+      .card-icon {
+        transform: rotateY(180deg);
+        color: $primary-navy;
+      }
+    }
+
+    .card-icon {
+      font-size: $font-size-h3;
+      color: $primary-dark;
+      margin-bottom: 1.5rem;
+      transition: all 0.6s ease; // 아이콘 회전 애니메이션 비활성화
+    }
+
+    h3 {
+      font-size: $font-size-h4;
+      color: $primary-navy;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: $font-size-base;
+        color: $primary-dark;
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+        line-height: 1.6;
+
+        &:before {
+          content: "▸";
+          position: absolute;
+          left: 0;
+          color: $primary-navy;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__intro {
+      height: 20vh;
+
+      &-title h1 {
+        .highlight-text {
+          font-size: $font-size-h4;
+        }
+        .main-text {
+          font-size: $font-size-h2;
+        }
+      }
+    }
+
+    &__tabs {
+      padding: 1.5rem;
+
+      .tab-button {
+        font-size: $font-size-base;
+        padding: 0.8rem 2rem;
+      }
+    }
+
+    &__cards {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__intro {
+      height: 15vh;
+
+      &-title h1 {
+        .highlight-text {
+          font-size: $font-size-h5;
+        }
+        .main-text {
+          font-size: $font-size-h3;
+        }
+      }
+    }
+
+    &__tabs {
+      padding: 1rem;
+      gap: 1rem;
+
+      .tab-button {
+        font-size: $font-size-small;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+
+    &__cards {
+      padding: 1rem;
+    }
+
+    &__card {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: $font-size-h5;
+      }
+
+      ul li {
+        font-size: $font-size-small;
+      }
+    }
+  }
+
+  &__main-services {
+    max-width: 1200px;
+    margin: -60px auto 0;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    .service-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(20px);
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards 1.2s;
+
+      h2 {
+        color: $primary-dark;
+        font-size: calc(1.5rem * var(--font-size-multiplier));
+        margin-bottom: 1rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 40px;
+          height: 3px;
+          background: $primary-gold;
+          transition: width 0.3s ease;
+        }
+      }
+
+      &:hover h2::after {
+        width: 100%;
+      }
+
+      p {
+        color: $text-gray;
+        font-size: calc(1rem * var(--font-size-multiplier));
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100px;
+    }
+  }
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  &__service-card {
+    background: rgba(white, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(white, 0.2);
+
+    &:hover {
+      transform: translateY(-10px);
+      background: rgba(white, 0.15);
+      border-color: $primary-gold;
+
+      .service-icon {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: $primary-gold;
+      margin-bottom: 1.5rem;
+      transition: transform 0.6s ease;
+      display: inline-block;
+    }
+
+    h2 {
+      color: white;
+      font-size: calc(1.5rem * var(--font-size-multiplier));
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: rgba(white, 0.8);
+      font-size: calc(1rem * var(--font-size-multiplier));
+      line-height: 1.6;
+    }
+  }
+
+  // Remove the old header styles
+  &__header,
+  &__title {
+    display: none;
+  }
+
+  &__content {
+    display: none; // Hide the old content section
+  }
+
+  // 원형 레이아웃 공통 스타일
+  &__circle-container,
+  &__si-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  &__center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: $primary-navy;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 20px $shadow-medium;
+    border: 2px solid $primary-dark;
+
+    h2 {
+      color: white;
+      font-size: calc(1.2rem * var(--font-size-multiplier));
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  &__connections {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 15px solid rgba($primary-navy, 0.1);
+      border-radius: 50%;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: $primary-navy;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 3;
+    box-shadow: 0 4px 8px $shadow-light;
+
+    &:hover {
+      background: darken($primary-navy, 5%);
+      box-shadow: 0 10px 20px rgba($primary-navy, 0.2);
+    }
+
+    h3 {
+      font-size: calc(1.2rem * var(--font-size-multiplier));
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    // 위치 지정
+    &--top {
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        transform: translateX(-50%) scale(1.05);
+      }
+
+      .business-info__circle-details {
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        text-align: left;
+        margin-left: 20px;
+        word-break: keep-all;
+      }
+    }
+
+    &--left {
+      bottom: 20%;
+      left: -30px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .business-info__circle-details {
+        left: -220px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+        word-break: keep-all;
+      }
+    }
+
+    &--right {
+      bottom: 20%;
+      right: -30px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .business-info__circle-details {
+        right: -220px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  &__circle-details {
+    position: absolute;
+    width: 200px;
+    color: $primary-dark;
+    font-size: calc(0.9rem * var(--font-size-multiplier));
+    line-height: 1.4;
+
+    span {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.3rem;
+      position: relative;
+      padding-left: 12px;
+
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: $primary-navy;
+      }
+    }
+  }
+
+  // SI 영역 스타일
+  &__si-section {
+    margin-top: 4rem;
+    position: relative;
+
+    &-header {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 3rem;
+      background: $primary-navy;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px $shadow-medium;
+      border: 2px solid $primary-dark;
+      z-index: 2;
+
+      h2 {
+        color: white;
+        font-size: calc(1.2rem * var(--font-size-multiplier));
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 0 2rem;
+
+      .business-info__area {
+        flex: 1;
+        min-width: 300px;
+        background: $bg-light;
+        border: 1px solid rgba($primary-navy, 0.1);
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba($primary-navy, 0.1);
+          border-color: $primary-navy;
+        }
+
+        h3 {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: calc(1.3rem * var(--font-size-multiplier));
+          color: $primary-navy;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+
+          svg {
+            color: $primary-navy;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            font-size: calc(0.95rem * var(--font-size-multiplier));
+            color: $primary-dark;
+            margin: 0.8rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+
+            &:before {
+              content: "▸";
+              position: absolute;
+              left: 0;
+              color: $primary-navy;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: calc(1.1rem * var(--font-size-multiplier));
+    color: $primary-dark;
+    margin-bottom: 2rem;
+  }
+}

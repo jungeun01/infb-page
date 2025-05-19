@@ -1,0 +1,276 @@
+@import "../../variables";
+
+.clients-form {
+  padding: 20px;
+
+  .form-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background: #f0f0f0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: $primary-navy;
+        color: white;
+      }
+
+      &:hover {
+        background: #e0e0e0;
+      }
+    }
+  }
+
+  .clients-section {
+    margin-bottom: 30px;
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .add-button {
+        padding: 8px 16px;
+        background: $primary-navy;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: darken($primary-navy, 10%);
+        }
+      }
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+
+      .item-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-content {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+
+          .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 75%; // 4:3 비율
+            background: #f8f9fa;
+            overflow: hidden;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              padding: 10px;
+            }
+
+            .no-image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #999;
+              font-size: 0.9rem;
+            }
+
+            .select-image-button {
+              position: absolute;
+              bottom: 10px;
+              left: 50%;
+              transform: translateX(-50%);
+              padding: 5px 10px;
+              background: rgba(0, 0, 0, 0.6);
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 0.8rem;
+              opacity: 0;
+              transition: opacity 0.3s ease;
+            }
+
+            &:hover .select-image-button {
+              opacity: 1;
+            }
+          }
+
+          .item-fields {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+              padding: 8px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              width: 100%;
+
+              &:focus {
+                outline: none;
+                border-color: $primary-navy;
+              }
+            }
+          }
+
+          .delete-button {
+            margin: 0 15px 15px;
+            padding: 8px;
+            background: $primary-red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+              background: darken($primary-gold, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+        margin-bottom: 15px;
+
+        .image-item {
+          cursor: pointer;
+          border: 2px solid transparent;
+          border-radius: 4px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: $primary-navy;
+          }
+
+          img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background: url("/resources/images/main/modal_close.png") no-repeat
+          center;
+        background-size: contain;
+        background-color: $primary-navy;
+        border: none;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        // 기존 버튼 텍스트 숨기기
+        font-size: 0;
+        color: transparent;
+      }
+
+      .upload-section {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 2px dashed #ddd;
+        border-radius: 8px;
+        text-align: center;
+
+        .upload-button {
+          padding: 10px 20px;
+          background: $primary-navy;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: darken($primary-navy, 10%);
+          }
+
+          input[type="file"] {
+            display: none;
+          }
+        }
+
+        .upload-text {
+          margin-top: 10px;
+          color: #666;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./fonts";
+@import "./typography";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+button {
+  font-family: $font-family-accent;
+  font-weight: $font-weight-medium;
+}
+
+input,
+textarea {
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+}
+
+// Import other styles below
+@import "./components/admin/forms/historyForm";

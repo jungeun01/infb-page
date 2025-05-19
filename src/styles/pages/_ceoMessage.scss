@@ -1,0 +1,179 @@
+@import "../variables";
+
+.ceo-message {
+  // background: #f8f9fa;
+  padding: 80px 0;
+  // min-height: calc(100vh - 180px);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  &__content {
+    flex: 1;
+
+    .title {
+      font-size: calc(2.5rem * var(--font-size-multiplier));
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        transform: translateX(-50%);
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 10%;
+        height: 3px;
+        background: linear-gradient(45deg, $primary-navy, $primary-gold);
+      }
+    }
+
+    .message {
+      font-size: calc(1.1rem * var(--font-size-multiplier));
+      line-height: 1.8;
+      color: #495057;
+      margin-bottom: 2rem;
+
+      p {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      // .highlight {
+      //   color: #ff6b6b;
+      //   font-weight: 600;
+      // }
+
+      // .emphasis {
+      //   font-weight: bold;
+      //   background: linear-gradient(
+      //     120deg,
+      //     rgba(255, 107, 107, 0.2) 0%,
+      //     rgba(255, 217, 61, 0.2) 100%
+      //   );
+      //   padding: 0 5px;
+      // }
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 3rem;
+
+      .position {
+        font-size: calc(1rem * var(--font-size-multiplier));
+        color: #6c757d;
+        margin-bottom: 0.5rem;
+      }
+
+      .name {
+        font-size: calc(1.5rem * var(--font-size-multiplier));
+        font-weight: bold;
+        color: #2c3e50;
+      }
+    }
+  }
+
+  &__image {
+    flex: 0 0 400px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 450px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100%;
+      height: 100%;
+      // border-radius: 20px;
+      // background: linear-gradient(45deg, #ff6b6b22, #ffd93d22);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .ceo-message {
+    padding: 60px 0;
+
+    &__container {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+
+    &__image {
+      flex: 0 0 auto;
+      max-width: 100%;
+      margin: 0 auto;
+
+      img {
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &__content {
+      .title {
+        font-size: calc(2rem * var(--font-size-multiplier));
+        text-align: center;
+
+        &::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .signature {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ceo-message {
+    padding: 40px 0;
+
+    &__content {
+      .title {
+        font-size: calc(1.8rem * var(--font-size-multiplier));
+      }
+
+      .message {
+        font-size: calc(1rem * var(--font-size-multiplier));
+        line-height: 1.6;
+      }
+
+      .signature {
+        .name {
+          font-size: calc(1.3rem * var(--font-size-multiplier));
+        }
+      }
+    }
+  }
+}

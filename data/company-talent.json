@@ -1,0 +1,60 @@
+{
+  "company": {
+    "talent": {
+      "title": "인재상",
+      "subtitle": "우리는 이런 인재를 찾습니다.",
+      "description": [
+        "수평적 조직으로 능동적이고 연구 중심적인 문화를 중요시합니다.",
+        "전문적인 지식으로 업무에 자부심이 넘치며",
+        "구성원들과 함께 높은 수준의 프로젝트를 수행합니다.",
+        "또한 고객의 눈높이에 맞추며 원활한 소통이 가능합니다."
+      ],
+      "recruitmentUrl": "https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=enBrbW5VMWRRT3VtOHRPN0swNXU5UT09",
+      "benefits": {
+        "title": "복리후생",
+        "items": [
+          {
+            "icon": "time.png",
+            "name": "근무시간",
+            "details": [
+              "근무시간 : 09:00 ~ 18:00",
+              "주 5일 근무제",
+              "대체휴일제 적용(관공서와 동일)"
+            ]
+          },
+          {
+            "icon": "growth.png",
+            "name": "4대 보험가입",
+            "details": [
+              "산재, 건강, 고용, 국민연금 가입",
+              "건강유지 및 질병예방을 위한 정기적 건강검진 실시"
+            ]
+          },
+          {
+            "icon": "smile.png",
+            "name": "경조사",
+            "details": ["경조사유에 따른 경조금 지급 및 휴가 부여"]
+          },
+          {
+            "icon": "sub_icon1.png",
+            "name": "교육지원",
+            "details": [
+              "자기계발 도서구입비 지원",
+              "신입사원 및 직무향상 교육 지원"
+            ]
+          },
+          {
+            "icon": "monitor.png",
+            "name": "업무환경",
+            "details": ["듀얼모니터 및 SSD 등 장비 수시 업그레이드"]
+          },
+          {
+            "icon": "car.png",
+            "name": "교통지원",
+            "details": ["야간근무 교통비 지급"]
+          }
+        ]
+      }
+    }
+  }
+}

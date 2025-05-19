@@ -1,0 +1,43 @@
+{
+  "title": "오시는 길",
+  "subtitle": "인포비 본사",
+  "address": {
+    "main": "서울특별시 강남구 테헤란로 123 인포비빌딩 5층",
+    "detail": "지하철 2호선 강남역 4번 출구에서 도보 5분"
+  },
+  "contact": {
+    "phone": "02-1234-5678",
+    "fax": "02-1234-5679",
+    "email": "info@infob.co.kr"
+  },
+  "coordinates": {
+    "latitude": 37.4967,
+    "longitude": 127.0276
+  },
+  "transportation": {
+    "subway": [
+      {
+        "line": "2호선",
+        "station": "강남역",
+        "exit": "4번 출구",
+        "directions": "출구에서 직진 300m"
+      }
+    ],
+    "bus": [
+      {
+        "type": "간선버스",
+        "numbers": ["140", "144", "145", "146"],
+        "stop": "강남역 버스정류장"
+      },
+      {
+        "type": "지선버스",
+        "numbers": ["3412", "4412"],
+        "stop": "강남역 버스정류장"
+      }
+    ]
+  },
+  "parking": {
+    "available": true,
+    "information": "건물 지하 주차장 이용 가능 (무료 2시간)"
+  }
+}

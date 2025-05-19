@@ -1,0 +1,185 @@
+.community {
+  .my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .border {
+    border-width: 1px;
+  }
+
+  .border-b {
+    border-bottom-width: 1px;
+  }
+
+  .border-gray-200 {
+    border-color: #e5e7eb;
+  }
+
+  border-color: #f9f9f9;
+
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bg-gray-100 {
+    background-color: #f3f4f6;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .w-6\/12 {
+    width: 50%;
+  }
+
+  .border-r {
+    border-right-width: 1px;
+  }
+
+  .border-gray-300 {
+    border-color: #d1d5db;
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+
+    &.hover\:text-blue-600:hover {
+      color: #2563eb;
+    }
+  }
+}
+
+.notice-list {
+  margin: 1.5rem 0;
+
+  .list-header {
+    display: flex;
+    padding: 1rem 0;
+    background-color: #f3f4f6;
+    border: 1px solid #f9f9f9;
+
+    .col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0.5rem;
+
+      p {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0 0.5rem;
+        border-right: 1px solid #d1d5db;
+      }
+
+      &:last-child p {
+        border-right: none;
+      }
+
+      &.number {
+        width: 8.33%;
+      }
+
+      &.title {
+        width: 50%;
+      }
+
+      &.author {
+        width: 16.67%;
+      }
+
+      &.date {
+        width: 16.67%;
+      }
+
+      &.views {
+        width: 8.33%;
+      }
+    }
+  }
+
+  .no-data {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 1.25rem;
+  }
+
+  .list-item {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: center;
+
+    .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.number {
+        width: 8.33%;
+      }
+
+      &.title {
+        width: 50%;
+        button {
+          width: 100%;
+          text-align: left;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+
+          &:hover {
+            color: #2563eb;
+          }
+        }
+      }
+
+      &.author {
+        width: 16.67%;
+      }
+
+      &.date {
+        width: 16.67%;
+      }
+
+      &.views {
+        width: 8.33%;
+      }
+    }
+  }
+}

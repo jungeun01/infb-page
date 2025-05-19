@@ -1,0 +1,93 @@
+.collection-editor {
+  padding: $spacing-xl;
+  background-color: $bg-light;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+
+  .editor-header {
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-md;
+    border-bottom: 2px solid $border-color;
+  }
+
+  .editor-content {
+    .editor-buttons {
+      display: flex;
+      gap: $spacing-md;
+      margin-bottom: $spacing-lg;
+
+      button {
+        padding: $spacing-sm $spacing-md;
+        border-radius: $border-radius-md;
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition-base;
+
+        &.save {
+          background-color: $primary-navy;
+          color: $text-light;
+          border: none;
+
+          &:hover {
+            background-color: darken($primary-navy, 10%);
+          }
+        }
+
+        &.delete {
+          background-color: $bg-light;
+          color: $primary-coral;
+          border: 1px solid $primary-coral;
+
+          &:hover {
+            background-color: $primary-coral;
+            color: $text-light;
+          }
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: $spacing-xl;
+
+      label {
+        display: block;
+        font-size: $font-size-base;
+        font-weight: 500;
+        color: $text-primary;
+        margin-bottom: $spacing-sm;
+
+        &[for="year"],
+        &[for="category"],
+        &[for="title"] {
+          font-weight: 600;
+          color: $primary-navy;
+        }
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: $spacing-md;
+        border: 2px solid $border-gray;
+        border-radius: $border-radius-md;
+        font-size: $font-size-base;
+        transition: $transition-base;
+        background-color: $bg-light;
+        color: $text-primary;
+
+        &:hover {
+          border-color: $primary-navy;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $primary-navy;
+          box-shadow: 0 0 0 3px rgba($primary-navy, 0.1);
+        }
+
+        &::placeholder {
+          color: $text-gray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "chart": [
+    {
+      "year": 2017,
+      "revenue": 23745455,
+      "operatingProfit": 2550757,
+      "totalAssets": 28725614,
+      "totalEquity": 12551426
+    },
+    {
+      "year": 2018,
+      "revenue": 279648790,
+      "operatingProfit": 47625122,
+      "totalAssets": 174391619,
+      "totalEquity": 56554138
+    },
+    {
+      "year": 2019,
+      "revenue": 1498612449,
+      "operatingProfit": 17225333,
+      "totalAssets": 355974504,
+      "totalEquity": 234507340
+    },
+    {
+      "year": 2020,
+      "revenue": 1437064272,
+      "operatingProfit": 79924745,
+      "totalAssets": 754636132,
+      "totalEquity": 321139061
+    },
+    {
+      "year": 2021,
+      "revenue": 2024000000,
+      "operatingProfit": 75336000,
+      "totalAssets": 754636000,
+      "totalEquity": 321139000
+    }
+  ]
+}

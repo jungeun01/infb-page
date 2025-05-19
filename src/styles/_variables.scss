@@ -1,0 +1,212 @@
+// Brand Colors
+$primary-navy: #1a3c7c; // 네이비 블루
+$primary-gold: #e9ad1c; // 골드
+$primary-dark: #333333; // 다크 그레이
+$primary-blue: #29a9ff; // 하늘색
+$primary-green: #34c759; // 그린
+
+// Legacy color variables (for backward compatibility)
+$primary-color: $primary-gold;
+$secondary-color: $primary-dark;
+
+// Background Colors
+$bg-light: #ffffff;
+$bg-gray: #f5f5f5;
+$bg-dark: $primary-dark;
+
+// Text Colors
+$text-dark: $primary-dark;
+$text-light: #ffffff;
+$text-gray: #666666;
+$text-color: $primary-dark;
+$gray: $text-gray;
+
+// Border Colors
+$border-primary: $primary-gold;
+$border-secondary: $primary-dark;
+$border-light: #eeeeee;
+$border-gray: #e0e0e0;
+$border-color: $border-light;
+
+// Shadow Colors
+$shadow-light: rgba($primary-gold, 0.1);
+$shadow-medium: rgba($primary-gold, 0.15);
+$shadow-dark: rgba($primary-gold, 0.2);
+$shadow-gray: rgba($primary-dark, 0.1);
+
+// Font Sizes
+$font-size-base: 16px;
+$font-size-multiplier: var(--font-size-multiplier);
+
+// Font Size Multiplier
+:root {
+  --font-size-multiplier: 1;
+}
+
+// Colors
+$accent-color: $primary-gold; // 강조색상
+$white: #ffffff;
+$light-gray: #f5f5f5;
+$dark-gray: $primary-dark; // #333으로 통일
+$background-color: #ffffff;
+
+// Fonts
+$base-font: "paybooc Medium", sans-serif;
+$font-family-base: "Noto Sans CJK KR", sans-serif;
+$font-family-heading: "Nanum Square", sans-serif;
+$font-family-accent: "Paybooc", sans-serif;
+
+// Font Sizes
+$font-size-small: calc(14px * var(--font-size-multiplier));
+$font-size-large: calc(18px * var(--font-size-multiplier));
+$font-size-h1: calc(32px * var(--font-size-multiplier));
+$font-size-h2: calc(28px * var(--font-size-multiplier));
+$font-size-h3: calc(24px * var(--font-size-multiplier));
+
+// Spacing
+$spacing-small: 10px;
+$spacing-base: 20px;
+$spacing-large: 30px;
+$spacing-xl: 60px;
+
+// Breakpoints
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Layout
+$container-width: 1200px;
+$container-padding: 20px;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-base;
+}
+
+// Colors
+$primary-navy: #1a3c7c; // 기존 네이비 블루
+$primary-gold: #e9ad1c; // 기존 골드
+$primary-dark: #333; // 기존 다크 그레이
+$primary-teal: #2a9d8f; // 새로운 청록색
+$primary-coral: #e76f51; // 새로운 코랄
+$primary-purple: #7209b7; // 새로운 퍼플
+$primary-red: #ff0000;
+// 새로운 오렌지
+$bg-light: #ffffff;
+$bg-gray: #f5f5f5;
+$text-dark: #333333;
+$text-gray: #666666;
+$text-light: #ffffff;
+$border-color: #eeeeee;
+
+// Font sizes with multiplier
+:root {
+  --font-size-multiplier: 1;
+}
+
+$font-size-base: calc(16px * var(--font-size-multiplier));
+$font-size-small: calc(14px * var(--font-size-multiplier));
+$font-size-large: calc(18px * var(--font-size-multiplier));
+$font-size-h1: calc(2.5rem * var(--font-size-multiplier));
+$font-size-h2: calc(2rem * var(--font-size-multiplier));
+$font-size-h3: calc(1.75rem * var(--font-size-multiplier));
+$font-size-h4: calc(1.5rem * var(--font-size-multiplier));
+$font-size-h5: calc(1.25rem * var(--font-size-multiplier));
+$font-size-h6: calc(1rem * var(--font-size-multiplier));
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-full: 9999px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// 기관별 색상 (확실하게 구분되는 색상으로 변경)
+$org-nts: #e91e63; // 국세청 - 선명한 핑크
+$org-pps: #2196f3; // 조달청 - 선명한 파랑
+$org-customs: #9c27b0; // 관세청 - 선명한 보라
+$org-posco: #f44336; // 포스코 - 선명한 빨강
+$org-kisti: #ff9800; // KISTI - 선명한 주황
+$org-fire: #d32f2f; // 소방청 - 선명한 레드
+$org-railway: #673ab7; // 국가철도공단 - 진한 보라
+$org-keit: #4caf50; // 한국산업기술평가관리원 - 선명한 초록
+$org-etri: #795548; // 한국전자통신연구원 - 브라운
+$org-acrc: #607d8b; // 국민권익위원회 - 블루 그레이
+$org-fine: #00bcd4; // 화인시스템 - 시안
+$org-molit: #ff5722; // 국토부 - 선명한 주황빨강
+$org-nca: #3f51b5; // 정부통합전산센터 - 인디고
+$org-posta: #009688; // 한국우편사업진흥원 - 틸
+$org-mpm: #ffc107; // 인사혁신처 - 노랑
+$org-entels: #8bc34a; // 엔텔스 - 라이트 그린
+$org-kipo: #ff4081; // 특허청 - 선명한 분홍
+$org-ultra: #cddc39; // 울트라엔지니어링 - 라임
+$org-mohw: #03a9f4; // 보건복지부 - 라이트 블루
+$org-joy: #7c4dff; // Joy 디자인 - 딥 퍼플
+$org-default: $primary-teal; // 기본 색상
+
+// Colors
+$primary-color: #2c7d76;
+$text-primary: #333333;
+$text-secondary: #666666;
+$background-light: #f8f9fa;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Font sizes
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-base: 1.5;
+$line-height-loose: 1.75;

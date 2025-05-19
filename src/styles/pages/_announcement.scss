@@ -1,0 +1,10 @@
+@import "../variables";
+.recruitment-announcement {
+  padding: $spacing-xl 0;
+  @include container;
+  margin-top: 2rem;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}

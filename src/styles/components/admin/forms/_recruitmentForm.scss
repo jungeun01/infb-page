@@ -1,0 +1,131 @@
+@import "../../../variables";
+
+.recruitment-form {
+  padding: 20px;
+
+  .form-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+          border-color: #2c7a7b;
+          box-shadow: 0 0 0 2px rgba(44, 122, 123, 0.2);
+        }
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+    }
+  }
+
+  .benefit-item {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    .benefit-header {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin-bottom: 15px;
+
+      .input-group {
+        flex: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .details-section {
+      margin-top: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .detail-item {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        input {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .add-button {
+    background-color: #2c7a7b;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: #285e61;
+    }
+  }
+
+  .remove-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #c53030;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .recruitment-form {
+    padding: 1rem;
+
+    .form-group {
+      .recruitment-item {
+        padding: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../../variables";
+
+.location-form {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: #2c7d76;
+        box-shadow: 0 0 0 2px rgba(44, 125, 118, 0.1);
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .location-form {
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 1rem;
+
+      input {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
